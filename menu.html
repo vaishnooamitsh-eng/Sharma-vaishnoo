@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SHARMA VAISHNOO DHABBA - Menu</title>
+  <style>
+    :root{
+      --bg: #fff8ee;
+      --card: #fff;
+      --accent: #d98b2b; /* warm ochre */
+      --muted: #6b6b6b;
+      --shadow: 0 6px 18px rgba(0,0,0,0.08);
+      --radius: 14px;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, #fff8ee 0%, #fffefc 100%);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:24px;
+      line-height:1.35;
+    }
+    .wrap{
+      max-width:1000px;
+      margin:0 auto;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:92px;
+      height:92px;
+      border-radius:20px;
+      background:linear-gradient(135deg,#ffd89b,#f07c2f);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:var(--shadow);
+      flex-shrink:0;
+    }
+    .logo h1{
+      margin:0;
+      font-size:20px;
+      color:white;
+      text-align:center;
+      padding:6px;
+    }
+    .title {
+      display:flex;
+      flex-direction:column;
+    }
+    .title h2{
+      margin:0;
+      font-size:28px;
+      letter-spacing:0.6px;
+    }
+    .title p{
+      margin:6px 0 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+      margin:18px 0;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:14px;
+      box-shadow:var(--shadow);
+    }
+
+    .menu-grid{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:18px;
+    }
+
+    /* Left menu list */
+    .menu-section{
+      margin-bottom:12px;
+    }
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:10px;
+    }
+    .section-head h3{
+      margin:0;
+      font-size:18px;
+      color:var(--accent);
+    }
+    .items {
+      display:grid;
+      gap:8px;
+    }
+
+    .item-row{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap:12px;
+      align-items:center;
+      padding:10px;
+      border-radius:10px;
+      transition:transform .12s ease;
+    }
+    .item-row:hover{ transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.06); }
+
+    .item-left{
+      font-weight:600;
+    }
+    .item-sub{
+      font-weight:400;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:4px;
+    }
+
+    .price-list{
+      text-align:right;
+      font-weight:700;
+      min-width:120px;
+    }
+    .price-small{
+      display:block;
+      font-weight:600;
+      color:#333;
+      font-size:14px;
+    }
+    .price-note{ font-size:12px; color:var(--muted); font-weight:500; }
+
+    /* Right QR / Info */
+    .info-column{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      position:sticky;
+      top:24px;
+      align-self:start;
+    }
+    .qr-box{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      align-items:center;
+      padding:16px;
+      text-align:center;
+    }
+    .qr-box img{
+      width:170px;
+      height:170px;
+      border-radius:10px;
+      background:white;
+      padding:6px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.08);
+    }
+    .small{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:20px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .menu-grid{ grid-template-columns: 1fr; }
+      .info-column{ position:relative; top:auto; }
+      .logo{ width:72px; height:72px; border-radius:12px; }
+      .title h2{ font-size:22px;}
+    }
+    /* small print */
+    .table-sub{
+      font-size:12px;
+      color:var(--muted);
+      margin-top:6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo card">
+        <h1>SHARMA<br/>VAISHNOO</h1>
+      </div>
+      <div class="title">
+        <h2>SHARMA VAISHNOO DHABBA</h2>
+        <p>Fresh, desi and affordable — menu with rates (INR)</p>
+      </div>
+    </header>
+
+    <div class="topbar">
+      <div class="card" style="padding:10px 14px;">
+        <strong>Menu last updated:</strong> <span style="color:var(--muted);">Today</span>
+        <div class="table-sub">Half / Full portions and per-piece breads shown clearly.</div>
+      </div>
+
+      <div class="card" style="padding:10px 14px; display:flex; gap:10px; align-items:center;">
+        <div style="font-weight:700; color:var(--accent);">Takeaway / Dine-in</div>
+        <div style="font-size:13px; color:var(--muted);">Cash &amp; digital accepted</div>
+      </div>
+    </div>
+
+    <div class="menu-grid">
+      <div>
+        <!-- Paneer Dishes -->
+        <section class="card menu-section">
+          <div class="section-head">
+            <h3>Paneer Dishes</h3>
+            <div class="small">Half / Full</div>
+          </div>
+          <div class="items">
+            <div class="item-row">
+              <div>
+                <div class="item-left">Kadhai Paneer</div>
+                <div class="item-sub">HALF / FULL</div>
+              </div>
+              <div class="price-list">
+                <div class="price-small">₹ 90.00 / ₹ 180.00</div>
+              </div>
+            </div>
+
+            <div class="item-row">
+              <div>
+                <div class="item-left">Paneer Butter Masala</div>
+                <div class="item-sub">HALF / FULL</div>
+              </div>
+              <div class="price-list">
+                <div class="price-small">₹ 90.00 / ₹ 180.00</div>
+              </div>
+            </div>
+
+            <div class="item-row">
+              <div>
+                <div class="item-left">Paneer Bhujiya</div>
+                <div class="item-sub">HALF / FULL</div>
+              </div>
+              <div class="price-list">
+                <div class="price-small">₹ 100.00 / ₹ 200.00</div>
+              </div>
+            </div>
+
+            <div class="item-row">
+              <div>
+                <div class="item-left">Shahi Paneer</div>
+                <div class="item-sub">HALF / FULL</div>
+              </div>
+              <div class="price-list">
+                <div class="price-small">₹ 70.00 / ₹ 140.00</div>
+              </div>
+            </div>
+
+            <div class="item-row">
+              <div>
+                <div class="item-left">Matar Paneer</div>
+                <div class="item-sub">HALF / FULL</div>
+              </div>
+              <div class="price-list">
+                <div class="price-small">₹ 70.00 / ₹ 140.00</div>
+              </div>
+            </div>
+
+            <div class="item-row">
+              <div>
+                <div class="item-left">Palak Paneer</div>
+                <div class="item-sub">HALF / FULL</div>
+              </div>
+              <div class="price-list">
+                <div class="price-small">₹ 70.00 / ₹ 140.00</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Daals and other Gravies -->
+        <section class="card menu-section">
+          <div class="section-head">
+            <h3>Daals and other Gravies</h3>
+            <div class="small">Half / Full</div>
+          </div>
+          <div class="items">
+            <div class="item-row">
+              <div><div class="item-left">Daal Makhni</div><div class="item-sub">HALF / FULL</div></div>
+              <div class="price-list"><div class="price-small">₹ 60.00 / ₹ 120.00</div></div>
+            </div>
+            <div class="item-row">
+              <div><div class="item-left">Daal Fry</div><div class="item-sub">HALF / FULL</div></div>
+              <div class="price-list"><div class="price-small">₹ 50.00 / ₹ 100.00</div></div>
+            </div>
+            <div class="item-row">
+              <div><div class="item-left">Rajma Masala</div><div class="item-sub">HALF / FULL</div></div>
+              <div class="price-list"><div class="price-small">₹ 60.00 / ₹ 110.00</div></div>
+            </div>
+            <div class="item-row">
+              <div><div class="item-left">Chana Masala</div><div class="item-sub">HALF / FULL</div></div>
+              <div class="price-list"><div class="price-small">₹ 60.00 / ₹ 110.00</div></div>
+            </div>
+            <div class="item-row">
+              <div><div class="item-left">Palak Kofta</div><div class="item-sub">HALF / FULL</div></div>
+              <div class="price-list"><div class="price-small">₹ 50.00 / ₹ 100.00</div></div>
+            </div>
+            <div class="item-row">
+              <div><div class="item-left">Kadhi Pakora</div><div class="item-sub">HALF / FULL</div></div>
+              <div class="price-list"><div class="price-small">₹ 50.00 / ₹ 100.00</div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dry Veggies -->
+        <section class="card menu-section">
+          <div class="section-head">
+            <h3>Dry Veggies</h3>
+            <div class="small">Half / Full</div>
+          </div>
+          <div class="items">
+            <div class="item-row"><div><div class="item-left">Aalo Gobhi</div></div><div class="price-list"><div class="price-small">₹ 50.00 / ₹ 100.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Baingan Masala</div></div><div class="price-list"><div class="price-small">₹ 50.00 / ₹ 100.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Tori</div></div><div class="price-list"><div class="price-small">₹ 50.00 / ₹ 100.00</div></div></div>
+          </div>
+        </section>
+
+        <!-- Breads -->
+        <section class="card menu-section">
+          <div class="section-head">
+            <h3>Breads</h3>
+            <div class="small">Per Piece</div>
+          </div>
+          <div class="items">
+            <div class="item-row"><div><div class="item-left">Tandoori Plain Roti</div><div class="item-sub">1 Pcs</div></div><div class="price-list"><div class="price-small">₹ 6.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Tandoori Butter Roti</div><div class="item-sub">1 Pcs</div></div><div class="price-list"><div class="price-small">₹ 7.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Aaloo Naan</div><div class="item-sub">1 Pcs</div></div><div class="price-list"><div class="price-small">₹ 25.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Butter Naan</div><div class="item-sub">1 Pcs</div></div><div class="price-list"><div class="price-small">₹ 30.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Paneer Naan</div><div class="item-sub">1 Pcs</div></div><div class="price-list"><div class="price-small">₹ 40.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Aaloo Prantha</div><div class="item-sub">1 Pcs</div></div><div class="price-list"><div class="price-small">₹ 25.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Laccha Prantha</div><div class="item-sub">1 Pcs</div></div><div class="price-list"><div class="price-small">₹ 25.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Paneer Prantha</div><div class="item-sub">1 Pcs</div></div><div class="price-list"><div class="price-small">₹ 40.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Tava Plain Roti</div><div class="item-sub">1 Pcs</div></div><div class="price-list"><div class="price-small">₹ 6.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Tava Butter Roti</div><div class="item-sub">1 Pcs</div></div><div class="price-list"><div class="price-small">₹ 7.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Tava Prantha</div><div class="item-sub">1 Pcs</div></div><div class="price-list"><div class="price-small">₹ 25.00</div></div></div>
+          </div>
+        </section>
+
+        <!-- Rice -->
+        <section class="card menu-section">
+          <div class="section-head">
+            <h3>Rice</h3>
+            <div class="small">Half / Full</div>
+          </div>
+          <div class="items">
+            <div class="item-row"><div><div class="item-left">Plain Rice</div></div><div class="price-list"><div class="price-small">₹ 30.00 / ₹ 60.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Rajma Chawal</div></div><div class="price-list"><div class="price-small">₹ 50.00 / ₹ 100.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Daal Chawal</div></div><div class="price-list"><div class="price-small">₹ 50.00 / ₹ 100.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Chole Chawal</div></div><div class="price-list"><div class="price-small">₹ 50.00 / ₹ 100.00</div></div></div>
+            <div class="item-row"><div><div class="item-left">Fried Rice</div></div><div class="price-list"><div class="price-small">₹ 60.00 / ₹ 110.00</div></div></div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="info-column">
+        <div class="card qr-box">
+          <!-- Replace REPLACE_WITH_YOUR_URL below with the final hosted page URL -->
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=REPLACE_WITH_YOUR_URL" alt="Scan to open Sharma Vaishnoo Dhabba menu (QR)">
+          <div style="font-weight:700; color:var(--accent)">Scan to open menu</div>
+          <div class="small">Point your phone camera at the QR code to view the menu on mobile.</div>
+        </div>
+
+        <div class="card" style="padding:12px;">
+          <div style="font-weight:700; margin-bottom:8px;">How to use QR</div>
+          <div class="small">
+            1. Host this `menu.html` on any server (GitHub Pages, Netlify, Firebase) or keep locally.<br>
+            2. Replace <code>REPLACE_WITH_YOUR_URL</code> in the QR image src with the page's public URL (URL must start with https://). Example:
+            <div style="margin-top:8px; font-family:monospace; font-size:13px; background:#faf7f4; padding:6px; border-radius:6px;">
+              https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://your-site.example/menu.html
+            </div>
+            3. Save &amp; open the page — QR will point to your hosted menu.
+          </div>
+        </div>
+
+        <div class="card" style="padding:12px;">
+          <div style="font-weight:700; margin-bottom:6px;">Notes</div>
+          <div class="small">Prices shown in INR. For printing, use browser print &gt; Scale: 100% and print background graphics if needed.</div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © Sharma Vaishnoo Dhabba — Fresh &amp; Tasty. Designed with ❤️
+    </footer>
+  </div>
+</body>
+</html>
